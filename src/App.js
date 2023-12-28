@@ -1,23 +1,21 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
+import mobileImage from './assets/images/background-pattern-mobile.svg'
+import desktopImage from './assets/images/background-pattern-desktop.svg'
+
+import Faq from './Faq';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <section className='bg-image'>
+       <picture>
+        <source media="(min-width:400px)" srcset={desktopImage}/>
+        <img src={mobileImage} alt="Flowers" />
+      </picture>
+     </section>
+     <Faq />
     </div>
   );
 }
